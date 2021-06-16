@@ -1,3 +1,5 @@
+org: ahmedelmaghraby207
+app: serverless-with-swagger
 service: swaggerui
 
 plugins:
@@ -54,7 +56,7 @@ functions:
           response:
             template: '{"greeting": "Hello Swagger!"}'
             statusCodes:
-              200:
+              "200":
                 pattern: ''
       - http:
           path: hello
@@ -66,7 +68,7 @@ functions:
               application/json: '{"statusCode": 200}'
           response:
             statusCodes:
-              201:
+              "201":
                 pattern: ''
 
 # the "hello" function has only mock API events and no actual code, minimize the size of the Lambda deployment package
